@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 이 문서는 mybatis에서 처리할 SQL문을 작성하는 문서입니다. -->
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0/EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- <mapper>태그의 namespace속성은 Java소스에서 실행할 SQL문을 호출할 때 같이 상요되는 이름이다. -->	
+<mapper namespace="lprod2">
+	<select id="getMexId" resultType="int">
+		select nvl(max(lprod_id), 0) + 1 maxid from lprod
+	</select>
+
+	<select id="getLprodCount" parameterType="String" resultType="int">
+		select COUNT(*) from lprod where lprod_gu = #{lprod_gu}
+	</select>
+	
+	<insert id="insertLprod" parameterType="lprodVo">
+		insert into lprod (lprod_id, lprod_gu, lprod_nm)
+		values (#{lprod_id}, #{lprod_gu}, #{lprod_nm})
+	</insert>
+	
+	<!-- 혼자 만든 부분(실행됨) -->
+	<!-- <insert id="inLprod" parameterType="lprodVo">
+		insert into lprod (lprod_id, lprod_gu, lprod_nm)
+		values ((select MAX(lprod_id)+1 from lprod), #{lprod_gu}, #{lprod_nm})
+	</insert>
+	
+	<select id="checkGu" parameterType="String" resultType="int">
+	 select COUNT(*) from lprod where lprod_gu = #{lprod_gu}
+	</select> -->
+
+</mapper>

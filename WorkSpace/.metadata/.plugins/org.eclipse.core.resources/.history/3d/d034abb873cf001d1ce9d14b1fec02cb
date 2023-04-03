@@ -1,0 +1,30 @@
+package kr.or.ddit.basic.json;
+
+public class lprodVO {
+
+	private String PROD_ID;
+	private String PROD_GU;
+	private String PROD_NM;
+	
+	public String getPROD_ID() {
+		return PROD_ID;
+	}
+	public void setPROD_ID(String pROD_ID) {
+		PROD_ID = pROD_ID;
+	}
+	public String getPROD_GU() {
+		return PROD_GU;
+	}
+	public void setPROD_GU(String pROD_GU) {
+		PROD_GU = pROD_GU;
+	}
+	public String getPROD_NM() {
+		return PROD_NM;
+	}
+	public void setPROD_NM(String pROD_NM) {
+		PROD_NM = pROD_NM;
+	}
+	
+	
+	
+}

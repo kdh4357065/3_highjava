@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="webTest">
+        <property name="context-root" value="webTest"/>
+        <property name="java-output-path" value="/webTest/build/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,30 @@
+package kr.or.ddit.basic.json;
+
+import org.apache.ibatis.session.SqlSession;
+
+import kr.or.ddit.util.MybatisSqlSessionFactory;
+
+public class lprodDaoImpl {
+	private static lprodDaoImpl dao;
+	
+	private lprodDaoImpl() {}
+	
+	public static lprodDaoImpl getInstance() {
+		if(dao == null) dao = new lprodDaoImpl();
+		return dao;
+	}
+	
+	public lprodVO allLpord() {
+		SqlSession session = null;
+		lprodVO vo = null;
+		
+		try {
+			session = MybatisSqlSessionFactory.getSqlSession();
+			
+			vo = session.selectList("lprod.allLprod")
+		} finally {
+			session.close();
+		}
+	}
+
+}

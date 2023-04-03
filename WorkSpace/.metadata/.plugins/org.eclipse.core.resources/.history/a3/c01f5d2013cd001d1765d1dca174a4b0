@@ -1,0 +1,32 @@
+package kr.or.ddit.basic.reqNresp;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//Request객체를 이용하여 요청할 때 가져온 데이터 처리하기
+@WebServlet("/requestTest01.do")
+public class RequestTest01 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//POST방식으로 전달되는 문자 데이터의 인코딩 방식 설정
+		request.setCharacterEncoding("utf-8");	
+		
+		//전달되는 데이터 받기
+		//getParameter("파라미터명") ==> 해당 파라미터에 설정된 '값'을 가져온다.
+		//	==> 가져온 '값'의 자료형은 'String'이다.
+		String userName = request.getParameter("username");
+		
+		String job = request.getParameter("job");
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

@@ -1,0 +1,27 @@
+package kr.or.ddit.basic.fileupload.dao;
+
+import java.util.List;
+
+import kr.or.ddit.vo.FileinfoVO;
+
+public class FileinfoDaoImpl implements IFileinfoDao {
+
+	@Override
+	public int insertFileinfo(FileinfoVO fileVo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<FileinfoVO> getAllFileinfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public FileinfoVO getFileinfo(int fileNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

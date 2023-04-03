@@ -1,0 +1,37 @@
+package kr.or.ddit.basic;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/*
+ 	서블릿 ==> 컨테이너(서브릿 엔진)에 의해 관리되는 자바 기반 웹 컴포넌트로서 동적인
+ 			 웹 컨텐츠 생성을 가능하게 해 준다.
+*/
+
+//이 예제 배포 서술자(web.xml)을 이용해서 실행할 Servlet을 설정하여 처리하는 예제이다.
+
+public class ServletTest01 extends HttpServlet {
+
+	//이 곳에서는 대부분 service()메서드 또는 doGet()메서드나 doPost()메서드를
+	//재정의해서 작성한다.
+	
+	//doGet()메서드난 doPost()메서드는 service()메서드를 통해서 호출된다.
+	//HttpServletRequest객체 ==> 서비스 요청에 관련된 정보 및 메서드를 관리하는 객체
+	//HttpServletResponse객체 ==> 서비스 응답에ㅐ 관련된 정보 및 메서드를 관리하는 객체
+		
+	//doGet()메서드 ==> GET방식의 요청을 처리하는 메서드
+	@Override
+	protected void doGet(HttpServletRequest reqest, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest reqest, HttpServletResponse response) throws ServletException, IOException {
+
+	}
+	
+}

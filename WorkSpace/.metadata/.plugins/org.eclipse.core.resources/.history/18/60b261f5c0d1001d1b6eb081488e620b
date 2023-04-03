@@ -1,0 +1,13 @@
+package kr.or.ddit.basic.fileupload.dao;
+
+import kr.or.ddit.vo.FileinfoVO;
+
+public class IFileinfoDao {
+	
+	/**
+	 * 
+	 * @param fileVo0
+	 * @return
+	 */
+	public int insertFileinfo(FileinfoVO fileVo);
+}

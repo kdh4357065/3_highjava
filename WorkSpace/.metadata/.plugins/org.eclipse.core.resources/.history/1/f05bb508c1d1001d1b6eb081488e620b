@@ -1,0 +1,10 @@
+package kr.or.ddit.basic.fileupload.dao;
+
+import kr.or.ddit.vo.FileinfoVO;
+
+public in IFileinfoDao {
+	
+
+	
+	
+}

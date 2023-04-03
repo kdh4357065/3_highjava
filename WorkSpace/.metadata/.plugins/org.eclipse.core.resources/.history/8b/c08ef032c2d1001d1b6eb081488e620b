@@ -1,0 +1,39 @@
+package kr.or.ddit.basic.fileupload.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import kr.or.ddit.vo.FileinfoVO;
+
+public class FileinfoDaoImpl implements IFileinfoDao {
+	private SqlSession session;
+	
+	private static FileinfoDaoImpl dao;
+	
+	private FileinfoDaoImpl() { }
+	
+	public static FileinfoDaoImpl getInstance() {
+		if(dao!=null) dao=new FileinfoDaoImpl();
+		return dao;
+	}
+	
+	@Override
+	public int insertFileinfo(FileinfoVO fileVo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<FileinfoVO> getAllFileinfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public FileinfoVO getFileinfo(int fileNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
